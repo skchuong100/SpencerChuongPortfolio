@@ -2,8 +2,8 @@ const numShapes = 20; // Adjust the number of shapes here
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = document.documentElement.scrollWidth;
+canvas.height = document.documentElement.scrollHeight;
 
 class Shape {
   constructor() {

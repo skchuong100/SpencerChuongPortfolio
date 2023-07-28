@@ -68,4 +68,44 @@ async function getRecentProjects(user) {
     }
 }
 
-getRecentProjects('skchuong100');
+// New function to check if an element is in the viewport
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to handle Intersection Observer callback
+function handleIntersect(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // When the element is in the viewport, fetch and display the recent projects
+            getRecentProjects('skchuong100');
+            // Disconnect the observer after the first time it's triggered (optional)
+            observer.disconnect();
+        }
+    });
+}
+
+// Function to set up Intersection Observer
+function observeProjectsList() {
+    const projectsList = document.getElementById('projects-list');
+    const observer = new IntersectionObserver(handleIntersect, { threshold: 0 });
+    observer.observe(projectsList);
+}
+
+// Call the function to set up Intersection Observer
+observeProjectsList();
+
+//getRecentProjects('skchuong100');
+
+
+
+
+
+
+
