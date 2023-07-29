@@ -32,13 +32,17 @@
         <div class="picture">
             <img src="picture/SpencerPhoto.jpg" alt="My profile picture">
         </div>
-        <div class="vl"></div>
+        
         <div class="header">
             <div class="title">
                 <h1><span>Hi, I'm </span><span>Spencer Chuong.</span></h1>
             </div>
             <div class="intro">
-                <h2>A growing programmer who’s learning more make impactful tools to solve problems differently than the norm. </h2>
+                <h2>I am a <span id="cycle" data-delay="3500" data-states='[ 
+                    "computer science student",
+                    "low-level programmer"
+                    ]'>addition to your team</span>
+who's building impactful tools that benefits everyone by looking at a different angle.</h2>
                 <div class="nav-item">
                     <a href="download/SpencerChuong_Resume.pdf" class="underlined">Resume</a>
                 </div>
@@ -47,15 +51,17 @@
             
         </div>
     </div>
+    <div class="vl"></div>
     <div class="scroll">
         <div>
-
             <h3 class="scroll-invite">Want to see what I’ve worked on?<br><em>Look below⬇</em></h3>
             <div class= "repo"><h3 id="projects-header">Recent repos (by commit):</h3></div>
-            <ul id="projects-list">
-                <li id="projects-loading"></li>
-            </ul>
         </div>
+    </div>
+    <div class="repolist">
+       <ul id="projects-list">
+            <li id="projects-loading"></li>
+        </ul>
     </div>
     <div class="footer">
         <div class="icons fl">
