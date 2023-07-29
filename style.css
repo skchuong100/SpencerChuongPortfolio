@@ -244,7 +244,7 @@ a.underlined:hover, a:hover span.underlined {
     padding: 0 2vw 0 0;
     font-family: 'Outfit';
     margin-left: 15%;
-    margin-right: 48%;
+    margin-right: 43%;
     position: absolute;
     animation: fadeIn 3s;
     
@@ -480,7 +480,18 @@ footer p {
     0% { opacity: 0; }
     100% { opacity: 1; }
     }
+
     
+/* CSS for fade-in effect */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
 /* Simple classes */
 .hidden,
 .hidden * {

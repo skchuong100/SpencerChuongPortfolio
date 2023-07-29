@@ -49,6 +49,8 @@ async function getRecentProjects(user) {
 
             let repoElement = document.createElement('li');
 
+            repoElement.className = 'fade-in'; // Add the fade-in class to the new element
+
             const timeSince = getTimeSince(new Date(repo.pushed_at));
             repoElement.innerHTML = `<a href="${repo.html_url}"><span class="underlined">${repo.name}</span> (${timeSince})</a>`;
 
@@ -57,9 +59,15 @@ async function getRecentProjects(user) {
             } else {
                 reposParent.appendChild(repoElement)
             }
+
+            setTimeout(() => {
+                repoElement.classList.add('visible');
+            }, POPIN_DELAY + (i * POPIN_DELAY_FADE_FACTOR));
+
             // Wait before fetching the next repo
             await delay(POPIN_DELAY + (i * POPIN_DELAY_FADE_FACTOR));
         }
+        
 
     } catch (error) {
         console.error(error);
