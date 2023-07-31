@@ -7,7 +7,8 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="preload" href="/fonts/RobotoMono-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="/fonts/Outfit-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
-  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="script.js"></script>  
   <title>spencerchuong.dev</title>
   <meta property="og:description"
         content=" Hi, I'm Spencer Chuong. A growing programmer who’s learning more make impactful tools to solve problems. ">
@@ -26,61 +27,55 @@
     <h3 class="banner">For now, this site is a work in progress.
         <em>However</em>, please don’t be hesitate to contact me.
     </h3>
-    <div id="main" class="safe fl fl-dir-col">
-        <div class="nav">
-            <div class="nav-item">
-                <!-- <a href="/projects.html" class="underlined">Projects</a> -->
+    <section class="first">
+            <div class="picture">
+                <img src="picture/SpencerPhoto.jpg" alt="My profile picture">
             </div>
-            
-        </div>
-        <div class="picture">
-            <img src="picture/SpencerPhoto.jpg" alt="My profile picture">
-        </div>
-        
-        <div class="header">
-            <div class="title">
-                <h1><span>Hi, I'm </span><span>Spencer Chuong.</span></h1>
-            </div>
-            <div class="intro">
-                <h2>An ambitious <span id="cycle" data-delay="3500" data-states='[ 
-                    "computer science student",
-                    "low-level programmer", 
-                    "addition to the team"
-                    ]'></span>
-who's building impactful tools that benefits everyone by looking at a different angle.</h2>
-                <div class="nav-item">
-                    <a href="download/SpencerChuong_Resume.pdf" class="underlined">Resume</a>
+            <div class="header">
+                <div class="title">
+                    <h1><span>Hi, I'm </span><span>Spencer Chuong.</span></h1>
                 </div>
+                <div class="intro">
+                    <h2>An ambitious <span id="cycle" data-delay="3500" data-states='[ 
+                        "computer science student",
+                        "low-level programmer", 
+                        "addition to the team"
+                        ]'></span>
+    who's building impactful tools that benefits everyone by looking at a different angle.</h2>
+                    <div class="nav-item">
+                        <a href="download/SpencerChuong_Resume.pdf" class="underlined">Resume</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="second">
+        <div class="vl"></div>
+        <div class="scroll">
+            <div>
+                <h3 class="scroll-invite">Want to see what I’ve worked on?<br><em>Look below⬇</em></h3>
+                <div class= "repo"><h3 id="projects-header">Recent repos (by commit):</h3></div>
+            </div>
         </div>
-        
-            
+        <div class="repolist">
+        <ul id="projects-list">
+                <li id="projects-loading"></li>
+            </ul>
         </div>
-    </div>
-    <div class="vl"></div>
-    <div class="scroll">
-        <div>
-            <h3 class="scroll-invite">Want to see what I’ve worked on?<br><em>Look below⬇</em></h3>
-            <div class= "repo"><h3 id="projects-header">Recent repos (by commit):</h3></div>
-        </div>
-    </div>
-    <div class="repolist">
-       <ul id="projects-list">
-            <li id="projects-loading"></li>
-        </ul>
-    </div>
-    <div class="footer">
-        <div class="icons fl">
-            <a href="https://www.linkedin.com/in/spencer-chuong-b258531ba" target="_blank" id="linkedin">
-                <img src="icons/linkedin.png" width="50" alt="Visit my LinkedIn page">
-            </a>
-            <a href="https://github.com/skchuong100" target="_blank" id="github">
-                <img src="icons/github.png" width="50" alt="Visit my GitHub page">
-            </a>
+        <div class="footer">
+            <div class="icons fl">
+                <a href="https://www.linkedin.com/in/spencer-chuong-b258531ba" target="_blank" id="linkedin">
+                    <img src="icons/linkedin.png" width="50" alt="Visit my LinkedIn page">
+                </a>
+                <a href="https://github.com/skchuong100" target="_blank" id="github">
+                    <img src="icons/github.png" width="50" alt="Visit my GitHub page">
+                </a>
         </div>
         <footer><a class="underlined" href="mailto:spencerchuong0@gmail.com">spencerchuong0@gmail.com</a>
             <br>Built from scratch using HTML, CSS, and JS 
         </footer>
-    </div>
+    </section>
+    
+    
   <div class="canvas-container">
       <canvas id="canvas"></canvas>
     </div>

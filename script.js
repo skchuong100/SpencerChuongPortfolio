@@ -53,4 +53,24 @@ function getTransitionDuration(element) {
 		getComputedStyle(element).transitionDuration.indexOf("s")));
 }
 
+window.scroll(function() {
+    $('.scroll').each(function() {
+        if (this.offset().top <= window.scrollTop()+window.height() * 0.75) {
+            this.addClass('visible');
+        }
+    });
+});
 
+function checkVisibility() {
+    $('.scroll').each(function() {
+        if ($(this).offset().top <= $(window).scrollTop()+$(window).height() * 0.75) {
+            $(this).addClass('visible');
+        }
+    });
+}
+
+// Run checkVisibility on scroll
+$(window).scroll(checkVisibility);
+
+// Run checkVisibility on page load
+$(document).ready(checkVisibility);
