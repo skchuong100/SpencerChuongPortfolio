@@ -136,6 +136,7 @@ a.underlined:hover, a:hover span.underlined {
     
     
 }
+
 /*
 .header {
     
@@ -149,6 +150,8 @@ a.underlined:hover, a:hover span.underlined {
     height: 100vh;
     box-sizing: border-box;
 }
+
+
 
 .vi::before {
     content: "";
@@ -171,7 +174,7 @@ a.underlined:hover, a:hover span.underlined {
     font-variation-settings: "wght" 400;
     white-space: nowrap;
     display: inline-block;
-    color: var(--highlight-color);
+    color: #FFF;
     background-color: var(--background-color-trans);
     font-family: 'Outfit';
     letter-spacing: 3px;
@@ -227,28 +230,23 @@ a.underlined:hover, a:hover span.underlined {
     top: 200px;
     left: 55%;
     transform: translate(-30%, -30%);   
-    animation: fadeIn 3s;
-    
-
-    
+    animation: fadeIn 3s;    
 }
 
 .picture img {
     max-width: 50%;
     max-height: 50%;
-    float: right;
-    
+    float: right;  
 }
 
 .picture::before,
 .picture::after {
     content: '';
     position: absolute;
-    width: 80px;
-    height: 80px;
     z-index: -1;
+    background-clip: padding-box; 
+    box-sizing: border-box; 
 }
-
 
 .picture::before {
     top: -40px;
@@ -257,15 +255,8 @@ a.underlined:hover, a:hover span.underlined {
     border-style: solid;
     height: 150px;
     width: 150px;
-    border-image: linear-gradient(to bottom right, #000AFF, #DB00FF 50%, transparent 25%) 1;
-    
-    
-    
+    border-image: linear-gradient(to bottom right, #000AFF, #DB00FF 50%, transparent 50%) 1; 
 }
-
-    
-
-
 .picture::after {
     bottom: -550px;
     right: -130px;
@@ -273,8 +264,9 @@ a.underlined:hover, a:hover span.underlined {
     border-style: solid;
     height: 150px;
     width: 150px;
-    border-image: linear-gradient(to top left,  #000AFF, #DB00FF 50%, transparent 25%) 1;
+    border-image: linear-gradient(to top left,  #000AFF, #DB00FF 50%, transparent 50%) 1;
 }
+
 
 
 
@@ -325,7 +317,7 @@ a.underlined:hover, a:hover span.underlined {
  /* Intro Cycle */
 
  span#cycle {
-    color: var(--alt-color);
+    color: #FFF;
     transition: transform 0.15s ease-in-out;
     display: inline-block;
     border-radius: 0.3vmax;
