@@ -1,3 +1,4 @@
+
 window.onload = function () {
 	pages = document.getElementsByClassName("page");
 	loadPage("main");
@@ -9,30 +10,27 @@ window.onload = function () {
 
 function flip_text(t) {
 
-	let time = getTransitionDuration(t) * 1000;
-	let delay = parseFloat(t.dataset.delay);
-	const states = JSON.parse(t.dataset.states);
-	const avgStatesLength = states.reduce((a, b) => a + b.length, 0) / states.length;
-	const maxStatesLength = Math.max(...states.map(x => x.length));
+    let time = getTransitionDuration(t) * 1000;
+    let delay = parseFloat(t.dataset.delay);
+    const states = JSON.parse(t.dataset.states);
+    const maxStatesLength = Math.max(...states.map(x => x.length));
 
-	let currentTextIndex = states.indexOf(t.textContent);
+    let currentTextIndex = states.indexOf(t.textContent);
 
-	t.style.transform = "scaleY(0)";
-	t.style.transformOrigin = "top";
+    t.style.transform = "scaleY(0)";
+    t.style.transformOrigin = "top";
 
+    setTimeout(function () {
+        currentTextIndex = (currentTextIndex + 1 >= states.length) ? 0 : currentTextIndex + 1;
+        t.textContent = states[currentTextIndex];
+        t.style.padding = `0 ${(maxStatesLength - t.textContent.length) / 2 + 1}ch`
+        t.style.transform = "scaleY(1)";
+        t.style.transformOrigin = "bottom";
+    }, time)
 
-	setTimeout(function () {
-		currentTextIndex = (currentTextIndex + 1 >= states.length) ? 0 : currentTextIndex + 1;
-		t.textContent = states[currentTextIndex];
-
-		t.style.padding = `0 ${(maxStatesLength - t.textContent.length) / 2 + 1}ch`
-		t.style.transform = "scaleY(1)";
-		t.style.transformOrigin = "bottom";
-	}, time)
-
-	setTimeout(function () {
-		flip_text(t);
-	}, delay)
+    setTimeout(function () {
+        flip_text(t);
+    }, delay)
 }
 
 function loadPage(pageName) {
@@ -53,24 +51,4 @@ function getTransitionDuration(element) {
 		getComputedStyle(element).transitionDuration.indexOf("s")));
 }
 
-window.scroll(function() {
-    $('.scroll').each(function() {
-        if (this.offset().top <= window.scrollTop()+window.height() * 0.75) {
-            this.addClass('visible');
-        }
-    });
-});
 
-function checkVisibility() {
-    $('.scroll').each(function() {
-        if ($(this).offset().top <= $(window).scrollTop()+$(window).height() * 0.75) {
-            $(this).addClass('visible');
-        }
-    });
-}
-
-// Run checkVisibility on scroll
-$(window).scroll(checkVisibility);
-
-// Run checkVisibility on page load
-$(document).ready(checkVisibility);
