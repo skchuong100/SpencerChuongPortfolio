@@ -28,9 +28,9 @@
     --highlightER-color: #dab46e13;
     --title-fontsize: calc(1.2rem + 0.5vw);
     --nav-fontsize: calc(0.7rem + 1.3vw);
-    --p-fontsize: calc(0.8rem + 0.3vw);
-    --h3-fontsize: calc(0.3rem + 0.6vw);
-    --cycle-fontsize: calc(0.8rem + 1.0vw);
+    --p-fontsize: calc(0.6rem + 0.3vw);
+    --h3-fontsize: calc(0.3rem + 0.5vw);
+    --cycle-fontsize: calc(0.6rem + 1.0vw);
 }
 
 /* Force 'html' to be viewport width */
@@ -166,24 +166,24 @@ a.underlined:hover, a:hover span.underlined {
 }
 
 .header::before {
-    top: 50px;
+    top: 80px;
     left: 10%;
-    border-width: 30px;
+    border-width: 25px;
     border-style: solid;
     height: 150px;
     width: 150px;
     border-image: linear-gradient(to bottom right, #000AFF, #DB00FF 50%, transparent 50%) 1; 
-    padding: 150px;
+    padding: 130px;
 }
 .header::after {
-    bottom: 50px;
+    bottom: 80px;
     right: 10%;
-    border-width: 30px;
+    border-width: 25px;
     border-style: solid;
     height: 150px;
     width: 150px;
     border-image: linear-gradient(to top left,  #000AFF, #DB00FF 50%, transparent 50%) 1;
-    padding: 150px;
+    padding: 130px;
 
 }
 
@@ -203,16 +203,18 @@ a.underlined:hover, a:hover span.underlined {
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 153px;
+    height: 164px;
     top: 44.2%;
-    left: 16%;
-    width: 2px; /* twice the border width for visibility */
-    background: linear-gradient(to top, #000AFF, #DB00FF); /* Replace with your desired colors */
+    left: 18.8%;
+    width: 2px; 
+    background: linear-gradient(to top, #000AFF, #DB00FF); 
+    animation: fadeIn 3s;
+
 }
 
 .title {
-    top: 35%;
-    left: 17%;
+    top: 27%;
+    left: 18.4%;
     font-size: var(--title-fontsize);
     line-height: calc(2rem + var(--title-fontsize));
     font-variation-settings: "wght" 400;
@@ -274,16 +276,17 @@ a.underlined:hover, a:hover span.underlined {
 
 .intro {
     top: 42%;
-    left: 17.25%;
+    left: 20%;
     font-size: var(--p-fontsize);
     font-variation-settings: "wght" 350;
     background-color: var(--background-color-trans);
     padding: 0 2vw 0 0;
     font-family: 'Outfit';
-    margin-right: 48%;
+    margin-right: 45%;
     position: absolute;
     animation: fadeIn 3s;
     display: inline-block;
+    line-height: 20px;
     
     
     
@@ -294,6 +297,7 @@ a.underlined:hover, a:hover span.underlined {
 .intro h2 {
     margin: 1vh 0;
     background-color: var(--background-color-trans);
+    line-height: 35px;
 
        
 }
@@ -427,12 +431,11 @@ font-size: calc(0.85 * var(--h3-fontsize));
     margin-left: 15.7%;
     margin-right: 50%;
     position: absolute;
-    left: 53.5%;
+    left: 52.5%;
     transform: translate(-50%, -50%);
-    
     text-align: left;
-    
     animation: fadeIn 3s;
+    font-size: var(--h3-fontsize);
 }
 
 .repolist li {
@@ -497,6 +500,8 @@ footer {
     width: 100vw;
     text-align: center;
     font-size: calc(0.8 * var(--p-fontsize));
+    animation: fadeIn 3s;
+    
 }
 
 @media only screen and (max-height: 400px) {
