@@ -34,7 +34,7 @@
     transition: var(--primary-color-transition) opacity .3s ease-in, var(--secondary-color-transition) opacity .3s ease-in;
 }
 
-/* Force 'html' to be viewport width */
+
 body {
     width: 100%;
     height: 100%;
@@ -45,7 +45,9 @@ body {
     overflow:hidden;
     margin-left:auto;
     margin-right:auto;
-    
+    align-items: flex-end;
+    justify-content: center;
+    display: flex;
     
 }
 a {
@@ -201,28 +203,20 @@ a.underlined:hover, a:hover span.underlined {
         top: 0;
         left: 0;
         transition: all .3s ease-in;
+        padding: 50px;
+        border-width: 15px;
     }
     .header::after{
         bottom: 0;
         right: 0;
         transition: all .3s ease-in ;
+        padding: 50px;
+        border-width: 15px;
+
     }
 }
 
-.vi::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    height: 164px;
-    top: 44.2%;
-    left: 18.8%;
-    width: 2px; 
-    background: linear-gradient(to top, var(--primary-color), var(--secondary-color)); 
-    animation: fadeIn 3s;
-    transition: all .3s ease-in;
 
-}
 
 .title {
     top: 27%;
@@ -267,10 +261,10 @@ a.underlined:hover, a:hover span.underlined {
 @media only screen and (max-width: 600px) {
     .title {
         font-size: calc(var(--title-fontsize)-100px);
-        line-height: calc(2rem + 1.5 * var(--title-fontsize));
-        border: 1px solid red;
-        top: 70px;
+        line-height: calc(0rem + 1.5 * var(--title-fontsize));
+        top: 160px;
         transition: all .3s ease-in;
+        left: 8%;
     }
 
     .title h1 {
@@ -284,7 +278,20 @@ a.underlined:hover, a:hover span.underlined {
 }
 
 
+.vi::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 164px;
+    top: 44.2%;
+    left: 18.8%;
+    width: 2px; 
+    background: linear-gradient(to top, var(--primary-color), var(--secondary-color)); 
+    animation: fadeIn 3s;
+    transition: all .3s ease-in;
 
+}
 
 
 
@@ -336,11 +343,32 @@ a.underlined:hover, a:hover span.underlined {
 @media only screen and (max-width: 600px) {
     .intro {
         white-space: normal;
-        font-size: calc(1.5 * var(--p-fontsize));
+        font-size: calc(0.7 * var(--p-fontsize));
+        
+        margin-right: 15%;
+        top: 30%;
+        left: 15%;
+        
     }
+    .intro h3{
+        white-space: normal;
+        font-size: calc(1.5 * var(--h3-fontsize));
+    }
+
+    .vi:before{
+        top: 32.5%;
+        left: 9.2%;
+        height: 199px;
+    }
+    #cycle{
+        font-size: calc(2.5 * var(--h3-fontsize));
+
+    }
+
+    
 }
 
- /* Intro Cycle */
+
 
  span#cycle {
     color: #FFF;
@@ -376,16 +404,17 @@ padding-left: 0;
 }
 
 .projects-list li, .projects-list a {
-font-size: calc(0.85 * var(--h3-fontsize));
+font-size: calc(1.85 * var(--h3-fontsize));
 
 
 
 }
 
 @media only screen and (max-width: 600px) {
-#projects-header {
+.projects-header {
     font-size: calc( var(--cycle-fontsize) * 1.45);
-    border: 1px solid green;    
+    border: 1px solid green;  
+      
 
 }
 
@@ -401,14 +430,38 @@ font-size: calc(0.85 * var(--h3-fontsize));
 
 
 @media only screen and (max-width: 600px) {
-    .repolist, .scroll {
-        width: 75vw;
-    
-        margin: 0 7.5vw 0 17.5vw;
+.scroll {
     
         transition: margin 0.05s ease-out;
-        border: 1px solid orange;
         
+        
+        margin-top: 55%;
+        margin-left: 40%;
+        left: 100px;
+        transform: translate(-118%, -20%);
+
+        
+    
+    }
+    .scroll::before{
+        margin-top: -5%;
+
+    }
+
+    .repolist{
+        margin-top: 50%;
+        margin-left: -50%;
+        left: 10px;
+        
+        font-size: calc(2.5 * var(--h3-fontsize));
+
+        
+
+    }
+
+    .repolist a{
+        font-size: calc(1.5 * var(--h3-fontsize));
+
     }
 }
 
@@ -419,16 +472,11 @@ font-size: calc(0.85 * var(--h3-fontsize));
     white-space: nowrap;
     display: inline-block;
     line-height: 50px;
-    top: 66%;
-    left: 55%;
+    top: 33%;
+    left: 60%;
     flex-basis: 60%;
     /*margin-left: 50px;*/
-    margin-left: 15.7%;
-    margin-right: 50%;
     position: absolute;
-    transform: translate(-50%, -50%);
-    padding-bottom: 500px;
-    margin-bottom: 50%;
     animation: fadeIn 3s;
     
 }
@@ -441,20 +489,21 @@ font-size: calc(0.85 * var(--h3-fontsize));
     white-space: nowrap;
     display: inline-block;
     line-height: 48px;
-    top: 51%;
+    top: 41.5%;
     flex-basis: 60%;
-    margin-left: 15.7%;
-    margin-right: 50%;
+    
+    
     position: absolute;
-    left: 52.5%;
-    transform: translate(-50%, -50%);
-    text-align: left;
+    left: 59.5%;
+    
+    
     animation: fadeIn 3s;
     font-size: var(--h3-fontsize);
+    
 }
 
 .repolist li {
-    display: block; /* This makes the element occupy the full width and starts on a new line */
+    display: block; 
 }
 
 .repolist li span {
@@ -514,6 +563,13 @@ div.footer {
 
 }
 
+footer {
+    width: 100vw;
+    text-align: center;
+    font-size: calc(0.8 * var(--p-fontsize));
+}
+
+
 
 @media only screen and (max-height: 400px) {
     
@@ -524,23 +580,31 @@ div.footer {
 }
 
 
+footer p {
+    margin: 0;
+}
 
-      /* Icon styling */
+      
       .icons {
+        display: flex;
         justify-content: center;
-        gap: 2vw;
+        gap: 0.5vw;
+        width: 100%;
+        bottom: 0%;
+       
+        
       }
-
+      
       .icons img {
+        display: inline-block;
         width: 2vw;
-        transition: background-color-trans 0.3s;
+        transition: background-color 0.3s;
         padding: 0.1vw;
         animation: fadeIn 3s;
-        left: 50%; /* Shift container to the right by half of the parent's width */
-        transform: translateX(2050%); /* Shift it back to the left by half of its own width, thus achieving centering */
-
+        text-align: center;
+        border-radius: 15%;
       }
-
+      
       .icons img:hover {
         background-color: var(--lowkey-accent-color);
       }
@@ -559,7 +623,7 @@ div.footer {
     }
 
 
-/* CSS for fade-in effect */
+
 
 .fade-in {
     opacity: 0;
@@ -570,16 +634,12 @@ div.footer {
     opacity: 1;
 }
 
-/* Simple classes */
+
 .hidden,
 .hidden * {
     display: none !important;
 }
-/*
-.underlined {
-    text-decoration: underline;
-}
-*/
+
 
 
 

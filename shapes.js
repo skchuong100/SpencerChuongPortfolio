@@ -1,4 +1,4 @@
-const numShapes = 35; // Adjust the number of shapes here
+const numShapes = 25; // Adjust the number of shapes here
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
