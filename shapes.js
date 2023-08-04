@@ -104,3 +104,20 @@ fadeElement.forEach(element => observer.observe(element));
 
 init();
 animate();
+
+// Adjust these lines to match the following
+canvas.width = canvas.clientWidth;
+canvas.height = canvas.clientHeight;
+
+// Add event listener for window resize
+window.addEventListener("resize", () => {
+  // Update canvas dimensions
+  canvas.width = canvas.clientWidth;
+  canvas.height = canvas.clientHeight;
+
+  // Update shapes
+  shapes.forEach(shape => {
+    shape.x = Math.random() * canvas.width;
+    shape.y = Math.random() * canvas.height;
+  });
+});
