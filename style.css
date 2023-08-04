@@ -31,7 +31,7 @@
     --p-fontsize: calc(0.6rem + 0.3vw);
     --h3-fontsize: calc(0.3rem + 0.5vw);
     --cycle-fontsize: calc(0.6rem + 1.0vw);
-    transition: var(--primary-color-transition) .3s ease-in-out, var(--secondary-color-transition) .3s ease-in-out;
+    transition: var(--primary-color-transition) opacity .3s ease-in, var(--secondary-color-transition) opacity .3s ease-in;
 }
 
 /* Force 'html' to be viewport width */
@@ -175,7 +175,7 @@ a.underlined:hover, a:hover span.underlined {
     width: 150px;
     border-image: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color) 50%, transparent 50%) 1; 
     padding: 130px;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in;
 }
 .header::after {
     bottom: 80px;
@@ -186,7 +186,7 @@ a.underlined:hover, a:hover span.underlined {
     width: 150px;
     border-image: linear-gradient(to top left,  var(--primary-color), var(--secondary-color) 50%, transparent 50%) 1;
     padding: 130px;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in;
 
 }
 
@@ -194,12 +194,12 @@ a.underlined:hover, a:hover span.underlined {
     .header::before{
         top: 0;
         left: 0;
-        transition: all .3s ease-in-out;
+        transition: all .3s ease-in;
     }
     .header::after{
         bottom: 0;
         right: 0;
-        transition: all .3s ease-in-out;
+        transition: all .3s ease-in ;
     }
 }
 
@@ -212,9 +212,9 @@ a.underlined:hover, a:hover span.underlined {
     top: 44.2%;
     left: 18.8%;
     width: 2px; 
-    background: linear-gradient(to top, var(--primary-color),#8F00FF, var(--secondary-color)); 
+    background: linear-gradient(to top, var(--primary-color), var(--secondary-color)); 
     animation: fadeIn 3s;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in;
 
 }
 
@@ -241,7 +241,7 @@ a.underlined:hover, a:hover span.underlined {
     font-weight: 400;
     position:absolute;
     animation: fadeIn 3s;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in;
     
     
     
@@ -264,7 +264,7 @@ a.underlined:hover, a:hover span.underlined {
         line-height: calc(2rem + 1.5 * var(--title-fontsize));
         border: 1px solid red;
         top: 70px;
-        transition: all .3s ease-in-out;
+        transition: all .3s ease-in;
     }
 
     .title h1 {
@@ -338,7 +338,7 @@ a.underlined:hover, a:hover span.underlined {
 
  span#cycle {
     color: #FFF;
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in;
     display: inline-block;
     border-radius: 0.3vmax;
     background-image: linear-gradient(to right,var(--primary-color), var(--secondary-color));
@@ -385,7 +385,7 @@ font-size: calc(0.85 * var(--h3-fontsize));
 
 .projects-list li, .projects-list a {
     font-size: calc(1.25 * var(--p-fontsize));
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in;
     
     
 }
@@ -464,7 +464,7 @@ font-size: calc(0.85 * var(--h3-fontsize));
     height: 2px;
     width: 100%;
     background: linear-gradient(to right,var(--primary-color), var(--secondary-color));
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in;
 }
 
 
@@ -478,7 +478,7 @@ font-size: calc(0.85 * var(--h3-fontsize));
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     font-size: var(--title-fontsize);
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in;
 }
 
 .scroll::before,
@@ -498,7 +498,7 @@ font-size: calc(0.85 * var(--h3-fontsize));
     height: 100px;
     width: 100px;
     border-image: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color) 50%, transparent 50%) 1; 
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in;
 }
 
 div.footer {
@@ -527,7 +527,7 @@ div.footer {
 
       .icons img {
         width: 2vw;
-        transition: background-color-trans 0.1s;
+        transition: background-color-trans 0.3s;
         padding: 0.1vw;
         animation: fadeIn 3s;
         left: 50%; /* Shift container to the right by half of the parent's width */
@@ -557,7 +557,7 @@ div.footer {
 
 .fade-in {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.3s ease-in;
 }
 
 .fade-in.visible {
