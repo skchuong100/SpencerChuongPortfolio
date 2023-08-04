@@ -23,14 +23,15 @@
     --lowkey-accent-color: #FFF;
     --hella-lowkey-accent-color: #FFF;
     --super-hella-lac: #FFF;
-    --highlight-color: #DB00FF;
-    --alt-color: #000AFF;
+    --secondary-color: #DB00FF;
+    --primary-color: #000AFF;
     --highlightER-color: #dab46e13;
     --title-fontsize: calc(1.2rem + 0.5vw);
     --nav-fontsize: calc(0.7rem + 1.3vw);
     --p-fontsize: calc(0.6rem + 0.3vw);
     --h3-fontsize: calc(0.3rem + 0.5vw);
     --cycle-fontsize: calc(0.6rem + 1.0vw);
+    transition: var(--primary-color-transition) .3s ease-in-out, var(--secondary-color-transition) .3s ease-in-out;
 }
 
 /* Force 'html' to be viewport width */
@@ -44,6 +45,7 @@ body {
     overflow:hidden;
     margin-left:auto;
     margin-right:auto;
+    
     
 }
 a {
@@ -75,7 +77,6 @@ a {
 }
 
 
-
 /* Banner */
 .banner {
     position: absolute;
@@ -83,7 +84,7 @@ a {
     top: 0;
     width: 100%;
     color: black;
-    background-image: linear-gradient(to right, #000AFF, #DB00FF);
+    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     width: 100%;
     text-align: center;
     padding: 1vmin;
@@ -122,7 +123,7 @@ a {
     left: 0;
     height: 2px;
     width: 100%;
-    background: linear-gradient(to right, #000AFF, #DB00FF);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
 
 a.underlined, span.underlined {
@@ -172,8 +173,9 @@ a.underlined:hover, a:hover span.underlined {
     border-style: solid;
     height: 150px;
     width: 150px;
-    border-image: linear-gradient(to bottom right, #000AFF, #DB00FF 50%, transparent 50%) 1; 
+    border-image: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color) 50%, transparent 50%) 1; 
     padding: 130px;
+    transition: all .3s ease-in-out;
 }
 .header::after {
     bottom: 80px;
@@ -182,8 +184,9 @@ a.underlined:hover, a:hover span.underlined {
     border-style: solid;
     height: 150px;
     width: 150px;
-    border-image: linear-gradient(to top left,  #000AFF, #DB00FF 50%, transparent 50%) 1;
+    border-image: linear-gradient(to top left,  var(--primary-color), var(--secondary-color) 50%, transparent 50%) 1;
     padding: 130px;
+    transition: all .3s ease-in-out;
 
 }
 
@@ -191,10 +194,12 @@ a.underlined:hover, a:hover span.underlined {
     .header::before{
         top: 0;
         left: 0;
+        transition: all .3s ease-in-out;
     }
     .header::after{
         bottom: 0;
         right: 0;
+        transition: all .3s ease-in-out;
     }
 }
 
@@ -207,8 +212,9 @@ a.underlined:hover, a:hover span.underlined {
     top: 44.2%;
     left: 18.8%;
     width: 2px; 
-    background: linear-gradient(to top, #000AFF, #DB00FF); 
+    background: linear-gradient(to top, var(--primary-color),#8F00FF, var(--secondary-color)); 
     animation: fadeIn 3s;
+    transition: all .3s ease-in-out;
 
 }
 
@@ -225,7 +231,7 @@ a.underlined:hover, a:hover span.underlined {
     font-family: 'Outfit';
     letter-spacing: 3px;
     line-height: 80px;
-    background-image: linear-gradient(to right, #000AFF, #DB00FF);
+    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     background-size: 100%;
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -235,6 +241,7 @@ a.underlined:hover, a:hover span.underlined {
     font-weight: 400;
     position:absolute;
     animation: fadeIn 3s;
+    transition: all .3s ease-in-out;
     
     
     
@@ -257,6 +264,7 @@ a.underlined:hover, a:hover span.underlined {
         line-height: calc(2rem + 1.5 * var(--title-fontsize));
         border: 1px solid red;
         top: 70px;
+        transition: all .3s ease-in-out;
     }
 
     .title h1 {
@@ -333,7 +341,7 @@ a.underlined:hover, a:hover span.underlined {
     transition: transform 0.15s ease-in-out;
     display: inline-block;
     border-radius: 0.3vmax;
-    background-image: linear-gradient(to right,#000AFF, #DB00FF);
+    background-image: linear-gradient(to right,var(--primary-color), var(--secondary-color));
     background-size: 100%;
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -343,6 +351,7 @@ a.underlined:hover, a:hover span.underlined {
     font-family: 'Outfit';
     font-size: var(--cycle-fontsize);
     font-variation-settings: "wght" 600;
+    
     
 }
 
@@ -454,13 +463,14 @@ font-size: calc(0.85 * var(--h3-fontsize));
     left: 0;
     height: 2px;
     width: 100%;
-    background: linear-gradient(to right,#000AFF, #DB00FF);
+    background: linear-gradient(to right,var(--primary-color), var(--secondary-color));
+    transition: all .3s ease-in-out;
 }
 
 
 
 .repo{
-    background-image: linear-gradient(to right, #000AFF, #DB00FF);
+    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     background-size: 100%;
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -468,6 +478,7 @@ font-size: calc(0.85 * var(--h3-fontsize));
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     font-size: var(--title-fontsize);
+    transition: all .3s ease-in-out;
 }
 
 .scroll::before,
@@ -486,70 +497,55 @@ font-size: calc(0.85 * var(--h3-fontsize));
     border-style: solid;
     height: 100px;
     width: 100px;
-    border-image: linear-gradient(to bottom right, #000AFF, #DB00FF 50%, transparent 50%) 1; 
-    
+    border-image: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color) 50%, transparent 50%) 1; 
+    transition: all .3s ease-in-out;
 }
 
 div.footer {
     position: absolute;
     bottom: 0;
     margin-bottom: 2vh;
+
 }
 
-footer {
-    width: 100vw;
-    text-align: center;
-    font-size: calc(0.8 * var(--p-fontsize));
-    animation: fadeIn 3s;
-    
-}
 
 @media only screen and (max-height: 400px) {
-    .footer {
-        display: none;
-        text-align: center;
-        font-size: calc(1.25 * var(--p-fontsize));
-        
-
-    }
+    
 
     .scroll {
         display: none;
     }
 }
 
-footer p {
-    margin: 0;
-}
-    /* Footer Icons */
-    .icons {
+
+
+      /* Icon styling */
+      .icons {
         justify-content: center;
         gap: 2vw;
-        text-align: center;
-    }
+      }
 
-    .icons img {
+      .icons img {
         width: 2vw;
-        background-color: var(--text-color);
         transition: background-color-trans 0.1s;
-        border-radius: 1vmax;
         padding: 0.1vw;
         animation: fadeIn 3s;
-        
-        
-        
+        left: 50%; /* Shift container to the right by half of the parent's width */
+        transform: translateX(2050%); /* Shift it back to the left by half of its own width, thus achieving centering */
 
-    }
+      }
 
-    .icons img:hover {
+      .icons img:hover {
         background-color: var(--lowkey-accent-color);
-    }
+      }
 
+    
     @media only screen and (max-width: 600px) {
         .icons img {
             width: 7vw;
         }
     }
+    
 
 @keyframes fadeIn {
     0% { opacity: 0; }

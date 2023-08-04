@@ -14,6 +14,15 @@ class Shape {
     this.speedY = Math.random() * 2 - 1;
     this.type = Math.random() < 0.3 ? "square" : Math.random() < 0.5 ? "triangle" : "circle";
     this.rotation = Math.random() * 360;
+
+    // Assign a color based on the type of shape
+    if (this.type === "square") {
+      this.color = "#8F00FF";
+    } else if (this.type === "triangle") {
+      this.color = "#DB00FF";
+    } else if (this.type === "circle") {
+      this.color = "#000AFF";
+    }
   }
 
   update() {
@@ -31,11 +40,12 @@ class Shape {
     ctx.translate(this.x, this.y);
     ctx.rotate(this.rotation * (Math.PI / 180));
 
+    // Use this.color for fillStyle
+    ctx.fillStyle = this.color;
+
     if (this.type === "square") {
-      ctx.fillStyle = "#8F00FF";
       ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
     } else if (this.type === "triangle") {
-      ctx.fillStyle = "#DB00FF";
       ctx.beginPath();
       ctx.moveTo(0, -this.size / 2);
       ctx.lineTo(this.size / 2, this.size / 2);
@@ -43,7 +53,6 @@ class Shape {
       ctx.closePath();
       ctx.fill();
     } else if (this.type === "circle") {
-      ctx.fillStyle = "#2400FF";
       ctx.beginPath();
       ctx.arc(0, 0, this.size / 2, 0, Math.PI * 2);
       ctx.fill();
