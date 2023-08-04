@@ -58,6 +58,8 @@ a {
     top: 0;
     left: 0;
     z-index: -1;
+    animation: fadeIn 3s;
+
   }
 
 #background {
@@ -176,6 +178,8 @@ a.underlined:hover, a:hover span.underlined {
     border-image: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color) 50%, transparent 50%) 1; 
     padding: 130px;
     transition: all .3s ease-in;
+    animation: fadeIn 3s;
+
 }
 .header::after {
     bottom: 80px;
@@ -187,6 +191,8 @@ a.underlined:hover, a:hover span.underlined {
     border-image: linear-gradient(to top left,  var(--primary-color), var(--secondary-color) 50%, transparent 50%) 1;
     padding: 130px;
     transition: all .3s ease-in;
+    animation: fadeIn 3s;
+
 
 }
 
