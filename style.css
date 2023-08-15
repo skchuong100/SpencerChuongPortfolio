@@ -232,14 +232,14 @@ a.underlined:hover, a:hover span.underlined {
         top: 60px;
         left: 5%;
         transition: all .3s ease-in;
-        padding: 100px;
+        padding: 50px;
         border-width: 15px;
     }
     .header::after{
         bottom: 60px;
         right: 5%;
         transition: all .3s ease-in ;
-        padding: 100px;
+        padding: 50px;
         border-width: 15px;
         
     }
@@ -280,8 +280,26 @@ a.underlined:hover, a:hover span.underlined {
     }
 }
 
+@media only screen and (max-width: 412px){
+    .header::before{
+        top: 0px;
+        left: 0%;
+        transition: all .3s ease-in;
+        padding: 50px;
+        border-width: 15px;
+    }
+    .header::after{
+        bottom: 0px;
+        right: 0%;
+        transition: all .3s ease-in ;
+        padding: 50px;
+        border-width: 15px;
+
+    }
+}
+
 .title {
-    top: 26%;
+    top: 25%;
     left: 18.4%;
     font-size: var(--title-fontsize);
     line-height: calc(2rem + var(--title-fontsize));
@@ -368,7 +386,7 @@ a.underlined:hover, a:hover span.underlined {
 
     .title h1 {
         
-
+        
         flex-direction: column;
     }
 
@@ -415,14 +433,33 @@ a.underlined:hover, a:hover span.underlined {
     }
 }
 
+@media only screen and (max-width: 412px) {
+    .title {
+        font-size: calc(var(--title-fontsize)-15%);
+        line-height: calc(1rem + 1.5 * var(--title-fontsize));
+        top: 150px;
+        transition: all .3s ease-in;
+        left: 10%;
+    }
+
+    .title h1 {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .title h1 span:first-child {
+        font-variation-settings: "wght" 350;
+    }
+}
+
 .vi::before {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     height: 164px;
-    top: 44.2%;
-    left: 18.8%;
+    top: 10%;
+    left: -3.3%;
     width: 2px; 
     background: linear-gradient(to top, var(--primary-color), var(--secondary-color)); 
     animation: fadeIn 3s;
@@ -524,8 +561,8 @@ a.underlined:hover, a:hover span.underlined {
     }
 
     .vi:before{
-        top: 40%;
-        left: 18.75%;
+        top: 10%;
+        left: -5.5%;
         height: 182px;
     }
     #cycle{
@@ -553,8 +590,8 @@ a.underlined:hover, a:hover span.underlined {
     }
 
     .vi:before{
-        top: 40%;
-        left: 11.4%;
+        top: 10%;
+        left: -5.5%;
         height: 182px;
     }
     #cycle{
@@ -581,9 +618,9 @@ a.underlined:hover, a:hover span.underlined {
     }
 
     .vi:before{
-        top: 31%;
-        left: 23.7%;
-        height: 185px;
+        top: 10%;
+        left: -4.5%;
+        height: 210px;
     }
     #cycle{
         font-size: calc(2.5 * var(--h3-fontsize));
@@ -609,9 +646,36 @@ a.underlined:hover, a:hover span.underlined {
     }
 
     .vi:before{
-        top: 31%;
-        left: 23.6%;
+        top: 10%;
+        left: -4.5%;
         height: 185px;
+    }
+    #cycle{
+        font-size: calc(2.5 * var(--h3-fontsize));
+
+    }
+
+    
+}
+@media only screen and (max-width: 412px) {
+    .intro {
+        white-space: normal;
+        font-size: calc(1.0 * var(--p-fontsize));
+        
+        margin-right: 10%;
+        top: 31%;
+        left: 14%;
+        
+    }
+    .intro h3{
+        white-space: normal;
+        font-size: calc(1.8 * var(--h3-fontsize));
+    }
+
+    .vi:before{
+        top: 8%;
+        left: -4.5%;
+        height: 205px;
     }
     #cycle{
         font-size: calc(2.5 * var(--h3-fontsize));
@@ -901,6 +965,41 @@ font-size: calc(1.85 * var(--h3-fontsize));
             }
             }
 
+            @media only screen and (max-width: 412px) {
+                .scroll {
+                
+                    transition: margin 0.05s ease-out;
+                    
+                    
+                    margin-top: 60%;
+                    margin-left: 40%;
+                    left: 100px;
+                    transform: translate(-118%, -20%);
+            
+                    
+                
+                }
+                .scroll::before{
+                    margin-top: -5%;
+            
+                }
+            
+                .repolist{
+                    margin-top: 55%;
+                    margin-left: -45%;
+                    left: 10px;
+                    
+                    font-size: calc(2.5 * var(--h3-fontsize));
+            
+                    
+            
+                }
+            
+                .repolist a{
+                    font-size: calc(1.5 * var(--h3-fontsize));
+            
+                }
+                }
 .scroll{
     font-variation-settings: "wght" 350;
     background-color: var(--background-color-trans);
