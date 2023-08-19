@@ -1,5 +1,5 @@
 REPO_COUNT = 3
-POPIN_DELAY = 350 // in milliseconds
+POPIN_DELAY = 550 // in milliseconds
 POPIN_DELAY_FADE_FACTOR = 100
 
 function getTimeSince(date) {
