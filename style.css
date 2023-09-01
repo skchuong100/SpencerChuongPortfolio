@@ -869,7 +869,7 @@ a {
     bottom: 0;
     height: 164px;
     top: 10%;
-    left: -3.3%;
+    left: -3.4%;
     width: 2px;
     background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
     animation: fadeIn 3s;
